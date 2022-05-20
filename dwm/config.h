@@ -66,9 +66,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]  = { "librewolf", "-p" };
-static const char *vscode[]   = { "code", NULL};
+static const char *termcmd[]  = { "st", NULL                                                                                                                 };
+static const char *browser[]  = { "librewolf", "-p"                                                                                                          };
+static const char *vscode[]   = { "code", NULL                                                                                                               };
+static const char *calibre[]  = { "calibre", NULL                                                                                                            };
+static const char *flame[]    = { "flameshot", NULL                                                                                                          };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,6 +111,8 @@ static Key keys[] = {
     /* Custom shortcuts. */ 
 	{ MODKEY,                       XK_a,      spawn,          {.v = browser } },
     { MODKEY,                       XK_v,      spawn,          {.v = vscode  } },
+    { MODKEY,                       XK_c,      spawn,          {.v = calibre } },
+    { MODKEY,                       XK_d,      spawn,          {.v = flame   } },
 };
 
 /* button definitions */
