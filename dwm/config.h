@@ -71,6 +71,7 @@ static const char *browser[]  = { "librewolf", "-p"                             
 static const char *vscode[]   = { "code", NULL                                                                                                               };
 static const char *calibre[]  = { "calibre", NULL                                                                                                            };
 static const char *flame[]    = { "flameshot", NULL                                                                                                          };
+static const char *qpdfv[]    = { "qpdfview", NULL                                                                                                           };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -113,6 +114,7 @@ static Key keys[] = {
     { MODKEY,                       XK_v,      spawn,          {.v = vscode  } },
     { MODKEY,                       XK_c,      spawn,          {.v = calibre } },
     { MODKEY,                       XK_d,      spawn,          {.v = flame   } },
+    { MODKEY,                       XK_q,      spawn,          {.v = qpdfv   } },
 };
 
 /* button definitions */
